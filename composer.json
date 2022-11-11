@@ -1,0 +1,41 @@
+{
+    "name"             : "primate/container",
+    "description"      : "Primitive framework",
+    "type"             : "library",
+    "keywords"         : [
+        "primate",
+        "container"
+    ],
+    "license"          : "MIT",
+    "authors"          : [
+        {
+            "name"    : "Jagepard",
+            "email"   : "jagepard@yandex.ru",
+            "homepage": "https://jagepard.ru",
+            "role"    : "Developer"
+        }
+    ],
+    "support"          : {
+        "email": "jagepard@yandex.ru",
+        "skype": "jagepard.ru"
+    },
+    "require"          : {
+        "php"             : ">=7.4",
+        "psr/container": "2.0.x-dev"
+    },
+    "autoload"         : {
+        "psr-4": {
+            "Primate\\Container\\": "src/"
+        }
+    },
+    "autoload-dev"     : {
+        "psr-4": {
+            "Primate\\Container\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "config"           : {
+        "optimize-autoloader": true,
+        "prefer-stable"      : true
+    }
+}
