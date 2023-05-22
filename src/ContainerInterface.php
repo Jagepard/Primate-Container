@@ -7,9 +7,7 @@
 
 namespace Primate\Container;
 
-use Psr\Container\ContainerInterface as PsrContainerInterface;
-
-interface ContainerInterface extends PsrContainerInterface
+interface ContainerInterface
 {
     /**
      * @param  string $id
@@ -17,4 +15,16 @@ interface ContainerInterface extends PsrContainerInterface
      * @return void
      */
     public function set(string $id, array $data): void;
+
+    /**
+     * @param  string|null $id
+     * @return void
+     */
+    public function get(string $id = null);
+
+    /**
+     * @param  string  $id
+     * @return boolean
+     */
+    public function has(string $id): bool;
 }
