@@ -7,8 +7,6 @@
 
 namespace Primate\Container;
 
-use Psr\Container\NotFoundExceptionInterface;
-
 class Container implements ContainerInterface
 {
     protected array $data = [];
@@ -40,7 +38,7 @@ class Container implements ContainerInterface
         }
 
         if (!array_key_exists($id, $this->data)) {
-            throw new NotFoundExceptionInterface("'$id' is not isset");
+            throw new \InvalidArgumentException("'$id' is not isset");
         }
 
         return $this->data[$id];
