@@ -11,5 +11,10 @@ use Psr\Container\ContainerInterface as PsrContainerInterface;
 
 interface ContainerInterface extends PsrContainerInterface
 {
-    public function set(array $data): void;
+    /**
+     * @param  string $id
+     * @param  array  $data
+     * @return void
+     */
+    public function set(string $id, array $data): void;
 }

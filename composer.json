@@ -1,6 +1,6 @@
 {
     "name"             : "primate/container",
-    "description"      : "Primitive framework",
+    "description"      : "Primitive container",
     "type"             : "library",
     "keywords"         : [
         "primate",
@@ -21,7 +21,8 @@
     },
     "require"          : {
         "php"             : ">=7.4",
-        "psr/container": "2.0.x-dev"
+        "psr/container": "2.0.x-dev",
+        "rudra/docs": "dev-master"
     },
     "autoload"         : {
         "psr-4": {
