@@ -7,7 +7,6 @@
 
 ### Class: Primate\Container\Container
 ##### implements [Primate\Container\ContainerInterface](#primate_container_containerinterface)
-##### implements [Psr\Container\ContainerInterface](#psr_container_containerinterface)
 | Visibility | Function |
 |:-----------|:---------|
 |public|<em><strong>__construct</strong>( array $data )</em><br>Sets data<br>Устанавливает данные|
@@ -19,12 +18,11 @@
 <a id="primate_container_containerinterface"></a>
 
 ### Class: Primate\Container\ContainerInterface
-##### implements [Psr\Container\ContainerInterface](#psr_container_containerinterface)
 | Visibility | Function |
 |:-----------|:---------|
 |abstract public|<em><strong>set</strong>( string $id  array $data ): void</em><br>|
-|abstract public|<em><strong>get</strong>( string $id )</em><br>Finds an entry of the container by its identifier and returns it.|
-|abstract public|<em><strong>has</strong>( string $id ): bool</em><br>Returns true if the container can return an entry for the given identifier.<br>Returns false otherwise.<br>`has($id)` returning true does not mean that `get($id)` will not throw an exception.<br>It does however mean that `get($id)` will not throw a `NotFoundExceptionInterface`.|
+|abstract public|<em><strong>get</strong>( ?string $id )</em><br>|
+|abstract public|<em><strong>has</strong>( string $id ): bool</em><br>|
 <hr>
 
 ###### created with [Rudra-Documentation-Collector](#https://github.com/Jagepard/Rudra-Documentation-Collector)
