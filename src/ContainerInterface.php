@@ -10,21 +10,32 @@ namespace Primate\Container;
 interface ContainerInterface
 {
     /**
-     * @param  string $id
+     * Receives data
+     * -------------
+     * Получает данные
+     *
+     * @param  string|null $id
+     * @return mixed
+     */
+    public function get(?string $id = null): mixed;
+
+    /**
+     * Adds data
+     * ---------
+     * Добавляет данные
+     * 
      * @param  array  $data
      * @return void
      */
-    public function set(string $id, array $data): void;
+    public function set(array $data): void;
 
     /**
-     * @param  string|null $id
-     * @return void
-     */
-    public function get(string $id = null);
-
-    /**
+     * Checks for data
+     * ---------------
+     * Проверяет наличие данных
+     *
      * @param  string  $id
-     * @return boolean
+     * @return bool
      */
     public function has(string $id): bool;
 }
