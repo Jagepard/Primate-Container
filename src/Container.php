@@ -9,8 +9,6 @@ namespace Primate\Container;
 
 class Container implements ContainerInterface
 {
-    protected array $data = [];
-
     /**
      * Sets data
      * ---------
@@ -18,9 +16,8 @@ class Container implements ContainerInterface
      *
      * @param  array $data
      */
-    public function __construct(array $data)
+    public function __construct(protected array $data = [])
     {
-        $this->data = $data;
     }
 
     /**
@@ -29,9 +26,9 @@ class Container implements ContainerInterface
      * Получает данные
      *
      * @param  string|null $id
-     * @return void
+     * @return mixed
      */
-    public function get(string $id = null)
+    public function get(?string $id = null): mixed
     {
         if (empty($id)) {
             return $this->data;
@@ -49,11 +46,10 @@ class Container implements ContainerInterface
      * ---------
      * Добавляет данные
      * 
-     * @param  string $id
      * @param  array  $data
      * @return void
      */
-    public function set(string $id, array $data): void
+    public function set(array $data): void
     {
         $this->data = array_merge($this->data, $data);
     }
@@ -64,7 +60,7 @@ class Container implements ContainerInterface
      * Проверяет наличие данных
      *
      * @param  string  $id
-     * @return boolean
+     * @return bool
      */
     public function has(string $id): bool
     {
